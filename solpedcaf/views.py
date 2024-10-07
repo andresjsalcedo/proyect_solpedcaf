@@ -8,6 +8,9 @@ from .models import etapa_de_plantacion
 from .models import etapa_de_fructificacion
 from .models import etapa_de_floracion
 from .models import consejos_para_su_cultivo
+from .models import seleccion_semilla
+from .models import cuidado_inicial
+from .models import sembrado
 from .forms import RegistroForm, LoginForm
 
 # Vista para listar objetos de la modelo 'pagina_inicial'
@@ -104,4 +107,33 @@ def consejos_para_su_cultivo_list(request):
     return render(
         request,
         'consejos_para_su_cultivo/post/list.html', {'consejos_para_su_cultivos': consejos_para_su_cultivos}
+    )
+
+
+#vista para seleccion semilla de consejos para su cultivo
+
+def seleccion_semilla_list(request):
+    seleccion_semillas = seleccion_semilla.objects.all()
+    return render(
+        request,
+        'consejos_para_su_cultivo/seleccion_semilla/post/list.html', {'seleccion_semillas': seleccion_semillas}
+    )
+
+#vista para cuidado inicial de consejos para su cultivo
+
+def cuidado_inicial_list(request):
+    cuidado_inicials = cuidado_inicial.objects.all()
+    return render(
+        request,
+        'consejos_para_su_cultivo/cuidado_inicial/post/list.html', {'cuidado_inicials': cuidado_inicials}
+    )
+
+
+#vistas para sembrado de consejos para su cultivo 
+
+def sembrado_list(request):
+    sembrados = sembrado.objects.all()
+    return render(
+        request,
+        'consejos_para_su_cultivo/sembrado/post/list.html', {'sembrados': sembrados}
     )

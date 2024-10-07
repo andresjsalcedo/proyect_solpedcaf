@@ -6,6 +6,9 @@ from .models import etapa_de_plantacion
 from .models import etapa_de_fructificacion
 from .models import etapa_de_floracion
 from .models import consejos_para_su_cultivo
+from .models import seleccion_semilla
+from .models import cuidado_inicial
+from .models import sembrado
 
 # Register your models here.
 
@@ -22,3 +25,9 @@ admin.site.register(etapa_de_fructificacion)
 admin.site.register(etapa_de_floracion)
 
 admin.site.register(consejos_para_su_cultivo)
+
+admin.site.register(seleccion_semilla)
+
+admin.site.register(cuidado_inicial)
+
+admin.site.register(sembrado)

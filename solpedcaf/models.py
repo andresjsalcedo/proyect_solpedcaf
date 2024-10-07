@@ -91,3 +91,54 @@ class consejos_para_su_cultivo(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+
+#CONSEJOS PARA SU CULTIVO SELECCION SEMILLA MODELS
+
+class seleccion_semilla(models.Model):
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    a_tener_en_cuenta = models.TextField( null=True)
+    a_tener_en_cuenta2 = models.TextField( null=True)
+    a_tener_en_cuenta3 = models.TextField(null=True)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+
+
+    def __str__(self):
+        return self.nombre
+
+
+
+
+#CONSEJOS PARA SU CULTIVO CUIDADO INICIAL MODELS 
+
+class cuidado_inicial(models.Model):
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    a_tener_en_cuenta = models.TextField( null=True, blank=True)
+    a_tener_en_cuenta2 = models.TextField( null=True, blank=True)
+    a_tener_en_cuenta3 = models.TextField(null=True, blank=True)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    
+
+
+    def __str__(self):
+        return self.nombre
+
+
+
+#CONSEJOS PARA SU CULTIVO SEMBRADO MODELS 
+
+class sembrado(models.Model):
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    a_tener_en_cuenta = models.TextField( null=True, blank=True)
+    a_tener_en_cuenta2 = models.TextField( null=True, blank=True)
+    a_tener_en_cuenta3 = models.TextField(null=True, blank=True)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    
+
+
+    def __str__(self):
+        return self.nombre
