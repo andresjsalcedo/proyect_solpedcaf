@@ -13,3 +13,81 @@ class pagina_inicial(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+#PLAGA Y ENFERMEDADES MODELS 
+
+class plagas_y_enfermedades(models.Model):
+    titulo = models.CharField(max_length=50)
+    descripcion = models.TextField()
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urlDestino = models.CharField(max_length=200, null=True)
+
+
+    def __str__(self):
+        return self.titulo
+
+#PLAGAS Y ENFERMEDADES ETAPA CRECIMIENTO MODELS 
+
+class etapa_de_crecimiento(models.Model):
+    titulo = models.CharField(max_length=200)
+    tipo = models.CharField(max_length=10)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+
+
+
+    def __str__(self):
+        return self.titulo
+
+
+#PLAGAS Y ENFERMEDADES ETAPA PLANTACION MODELS 
+
+class etapa_de_plantacion(models.Model):
+    titulo = models.CharField(max_length=200)
+    tipo = models.CharField(max_length=10)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+
+
+
+    def __str__(self):
+        return self.titulo
+    
+
+#PLAGAS Y ENFERMEDADES ETAPA FRUCTIFICACION MODELS 
+
+class etapa_de_fructificacion(models.Model):
+    titulo = models.CharField(max_length=200)
+    tipo = models.CharField(max_length=10)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+
+
+
+    def __str__(self):
+        return self.titulo
+
+
+#PLAGAS Y ENFERMEDADES ETAPA FLORACION MODELS 
+
+class etapa_de_floracion(models.Model):
+    titulo = models.CharField(max_length=200)
+    tipo = models.CharField(max_length=10)
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+
+
+
+    def __str__(self):
+        return self.titulo
+
+
+
+
+#CONSEJOS PARA SU CULTIVO MODELS
+
+class consejos_para_su_cultivo(models.Model):
+    titulo = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urlDestino = models.CharField(max_length=200, null=True)
+
+
+    def __str__(self):
+        return self.titulo

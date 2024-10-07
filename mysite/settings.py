@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     "default":{
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'solpedcaf',
+        'NAME': 'proyect_solpedcaf',
         'USER': 'root',
         'PASSWORD': "rootsena",
         'HOST': 'localhost',
@@ -126,8 +126,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
 #para mostrar las imagenes en el background de las cards
-MEDIA_URL = MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Default primary key field type
