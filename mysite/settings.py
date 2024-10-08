@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0jb3v_ishkl=t)noy55jg^fy9m*e**w$23866zqx!*ef316gni
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.217.142.33']
+ALLOWED_HOSTS = ['18.217.142.33','127.0.0.1']
 
 
 # Application definition
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     "default":{
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'solpedcaf',
+        'NAME': 'proyect_solpedcaf',
         'USER': 'root',
-        'PASSWORD': "root",
+        'PASSWORD': "rootsena",
         'HOST': 'localhost',
         'PORT': '3306',
     }

@@ -15,7 +15,7 @@
   <!--MENU HORIZONTAL-->
   <nav class="navbar navbar-expand-lg" id="navbar" style="background-color:#00BF63">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold fs-1 ms-1 text-light" href="http://127.0.0.1:8000/pagina_inicial">SOLPEDCAF</a>
+      <a class="navbar-brand fw-bold ms-1 text-light" href="http://127.0.0.1:8000/pagina_inicial" style="font-size: 3.5rem;">SOLPEDCAF</a>
       <button class="navbar-toggler bg-white border-secondary" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -25,16 +25,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-1 ms-2 mt-1">
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Configuracion</a>
+            <a class="nav-link active fw-semibold text-light fs-4 me-2" aria-current="page" href="#">Configuracion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Calificanos</a>
+            <a class="nav-link active fw-semibold text-light fs-4 me-2" aria-current="page" href="#">Calificanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active fw-semibold text-light fs-5 me-2" aria-current="page" href="#">Comentarios</a>
+            <a class="nav-link active fw-semibold text-light fs-4 me-2" aria-current="page" href="#">Comentarios</a>
           </li>
           <li class=" nav-item position-absolute top-0 end-0  mt-3 me-2">
-            <img class="nav-link active d-none d-md-block" src="../../static/user.png" style="width: 3rem;">
+            <img class="nav-link active d-none d-md-block" src="../../../media/modulos/user.png" style="width: 4rem;">
           </li>
         </ul>
       </div>
@@ -42,6 +42,54 @@
   </nav>
 
   <!--FIN MENU HORIZONTAL-->
+
+   <!--carrousel-->
+
+   <div class="container-fluid mt-2 mb-4">
+    <div class="row">
+      <div class="col-xl-12">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../../media/modulos/carrousel.png" class="d-block w-100 carrousel" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../../media/modulos/carrousel.png" class="d-block w-100 carrousel" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../../media/modulos/carrousel.png" class="d-block w-100 carrousel" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Fin carrousel-->
 
 
 <div class="container-fluid">

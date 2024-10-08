@@ -1,10 +1,10 @@
-{% extends "consejos_para_su_cultivo/consejos_para_su_cultivo.html" %}
+{% extends "consejos_para_su_cultivo/fertilizacion/fertilizacion.html" %}
 {% load static %}
 
-{% block title %}Consejos Para Su Cultivo{% endblock %}
+{% block title %} Fertilizacion {% endblock %}
 {% block content %}
 
-{% for consejos_para_su_cultivo in consejos_para_su_cultivos %}
+{% for fertilizacion in Fertilizacions %}
 <link rel="stylesheet" href="{% static 'css/style.css'%}">
 <div class="col-xl-6 d-flex justify-content-center">
 <div class="card rounded-0 mt-3 mb-2 text-white" style="background-image: url('{{ consejos_para_su_cultivo.imagen.url}}'); background-size: cover; width: 85rem;">
