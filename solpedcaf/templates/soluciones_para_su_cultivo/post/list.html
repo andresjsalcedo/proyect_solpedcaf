@@ -1,0 +1,16 @@
+{% extends "soluciones_para_su_cultivo/soluciones_para_su_cultivo.html" %}
+{% load static %}
+
+{% block title %}Soluciones Para Su Cultivo{% endblock %}
+{% block content %}
+
+{% for soluciones_para_su_cultivo in soluciones_para_su_cultivos %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+<div class="col-xl-12">
+    <div class="container-fluid">
+        <h4 class="fw-semibold col-xl-12">{{ soluciones_para_su_cultivo.titulo }}</h4> <hr>
+    </div>
+
+</div>
+{% endfor %}
+{% endblock %}

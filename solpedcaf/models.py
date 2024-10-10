@@ -45,6 +45,9 @@ class etapa_de_plantacion(models.Model):
     titulo = models.CharField(max_length=200)
     tipo = models.CharField(max_length=10)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen2 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen3 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urldestino = models.CharField(max_length=100, null=True)
 
 
 
@@ -159,3 +162,15 @@ class fertilizacion(models.Model):
 
     def __str__(self):
         return self.nombre
+
+
+#SOLUCIONES PARA SU CULTIVO MODELS
+
+class soluciones_para_su_cultivo(models.Model):
+    titulo = models.CharField(max_length=100)
+    descripcion = models.TextField()
+    urlDestino = models.CharField(max_length=200, null=True)
+
+
+    def __str__(self):
+        return self.titulo

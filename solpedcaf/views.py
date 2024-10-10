@@ -12,6 +12,7 @@ from .models import seleccion_semilla
 from .models import cuidado_inicial
 from .models import sembrado
 from .models import fertilizacion
+from .models import soluciones_para_su_cultivo
 from .forms import RegistroForm, LoginForm
 
 # Vista para listar objetos de la modelo 'pagina_inicial'
@@ -147,4 +148,14 @@ def fertilizacion_list(request):
     return render(
         request,
         'consejos_para_su_cultivo/fertilizacion/post/list.html', {'fertilizacions': fertilizacions}
+    )
+
+
+#vista para consejos para su cultivo
+
+def soluciones_para_su_cultivo_list(request):
+    soluciones_para_su_cultivos = soluciones_para_su_cultivo.objects.all()
+    return render(
+        request,
+        'soluciones_para_su_cultivo/post/list.html', {'soluciones_para_su_cultivos': soluciones_para_su_cultivos}
     )

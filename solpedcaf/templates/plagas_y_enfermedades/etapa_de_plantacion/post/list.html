@@ -1,25 +1,44 @@
 {% extends "plagas_y_enfermedades/etapa_de_plantacion/etapa_de_plantacion.html" %}
 {% load static %}
 
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 {% block title %}Etapa De Plantacion{% endblock %}
 {% block content %}
 
 {% for etapa_de_plantacion in etapa_de_plantacions %}
-<link rel="stylesheet" href="{% static 'css/style.css'%}">
-<div class="col-xl-6 d-flex justify-content-center">
-<div class="card rounded-0 mt-3 mb-2 text-white" style="background-image: url('{{ plagas_y_enfermedades.imagen.url}}'); background-size: cover; width: 85rem;">
-    <div class="row g-0">
-      <div class="col-xl-12">
-        <div class="card-body">
-          <h1 class="card-title fw-bold" style="font-size: 3.5rem;">{{ plagas_y_enfermedades.titulo }}</h1>
-          <p class="card-text col-8 fw-semibold" style="font-size: 1.6rem;">{{ plagas_y_enfermedades.descripcion }}</p>
-          <div class="btn mt-5">
-          <a href="{{ plagas_y_enfermedades.urlDestino }}" class="btn btn-outline-success text-white border-white rounded-0 fs-5 position-absolute bottom-0 start-0 ms-3 mb-3" style="font-weight: 900;">Ver Más</a>
-          </div>
+<div class="col-xl-4 d-flex justify-content-center">
+  <div class="card">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src=" {{etapa_de_plantacion.imagen.url}} " class="d-block w-100" alt="Imagen 1" style="max-width: 30rem;">
+            </div>
+            <div class="carousel-item">
+                <img src=" {{etapa_de_plantacion.imagen2.url}} " class="d-block w-100" alt="Imagen 2" style="max-width: 30rem;">
+            </div>
+            <div class="carousel-item">
+                <img src=" {{etapa_de_plantacion.imagen3.url}} " class="d-block w-100" alt="Imagen 3" style="max-width: 30rem;">
+            </div>
         </div>
-      </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
     </div>
-  </div>
+    <div class="card-body">
+        <h2 class="card-subtitle mb-2 text-muted fw-bold"> {{etapa_de_plantacion.tipo}} </h2>
+        <h1 class="card-title fw-bold"> {{etapa_de_plantacion.titulo}} </h1>
+        
+    </div>
 </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
 {% endfor %}
 {% endblock %}

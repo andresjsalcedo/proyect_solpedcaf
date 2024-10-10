@@ -10,6 +10,7 @@ from .models import seleccion_semilla
 from .models import cuidado_inicial
 from .models import sembrado
 from .models import fertilizacion
+from .models import soluciones_para_su_cultivo
 
 # Register your models here.
 
@@ -34,3 +35,5 @@ admin.site.register(cuidado_inicial)
 admin.site.register(sembrado)
 
 admin.site.register(fertilizacion)
+
+admin.site.register(soluciones_para_su_cultivo)
