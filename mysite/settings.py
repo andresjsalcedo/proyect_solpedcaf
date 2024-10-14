@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'proyect_solpedcaf',
         'USER': 'root',
         'PASSWORD': "rootsena",
-        'HOST': 'localhost',
+        'HOST': '3.145.126.137',
         'PORT': '3306',
     }
 }
