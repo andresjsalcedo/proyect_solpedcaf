@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'proyect_solpedcaf',
         'USER': 'root',
         'PASSWORD': "rootsena",
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
@@ -121,9 +121,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
 
-STATIC_URL = "/static/"
+    BASE_DIR / "solpedcaf/static",  # Asegúrate de que esta carpeta exista
+]
+
 
 #para mostrar las imagenes en el background de las cards
 MEDIA_URL = MEDIA_URL = 'media/'

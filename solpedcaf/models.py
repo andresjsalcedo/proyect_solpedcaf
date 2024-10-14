@@ -168,8 +168,25 @@ class fertilizacion(models.Model):
 
 class soluciones_para_su_cultivo(models.Model):
     titulo = models.CharField(max_length=100)
-    descripcion = models.TextField()
-    urlDestino = models.CharField(max_length=200, null=True)
+    implemento1 = models.CharField(max_length=200, null=True)
+    metodo_de_aplicacion1 = models.CharField(max_length=300, null=True)
+    toxicidad1 = models.CharField(max_length=300, null=True)
+    imagen1 = models.ImageField(upload_to='implementos', null=True)
+
+    implemento2 = models.CharField(max_length=200, null=True)
+    metodo_de_aplicacion2 = models.CharField(max_length=300, null=True)
+    toxicidad2 = models.CharField(max_length=300, null=True)
+    imagen2 = models.ImageField(upload_to='implementos', null=True)
+
+    implemento3 = models.CharField(max_length=200, null=True)
+    metodo_de_aplicacion3 = models.CharField(max_length=300, null=True)
+    toxicidad3 = models.CharField(max_length=300, null=True)
+    imagen3 = models.ImageField(upload_to='implementos', null=True)
+
+    implemento3 = models.CharField(max_length=200, null=True)
+    metodo_de_aplicacion3 = models.CharField(max_length=300, null=True)
+    toxicidad3 = models.CharField(max_length=300, null=True)
+    imagen3 = models.ImageField(upload_to='implementos', null=True)
 
 
     def __str__(self):

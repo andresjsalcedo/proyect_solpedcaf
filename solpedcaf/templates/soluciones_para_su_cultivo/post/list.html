@@ -5,12 +5,55 @@
 {% block content %}
 
 {% for soluciones_para_su_cultivo in soluciones_para_su_cultivos %}
-<link rel="stylesheet" href="{% static 'css/style.css'%}">
-<div class="col-xl-12">
-    <div class="container-fluid">
-        <h4 class="fw-semibold col-xl-12">{{ soluciones_para_su_cultivo.titulo }}</h4> <hr>
-    </div>
+<link rel="stylesheet" href="{% static 'style.css'%}">
 
-</div>
+    <h2 class="fw-bold container-fluid">{{ soluciones_para_su_cultivo.titulo }}</h2> 
+    <hr class="border container-fluid border-1 opacity-75 col-xl-12" style="width: 83rem;">
+
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-6 col-sm-6">
+        <div class="card card-spc container-fluid mb-2">
+            <img class="card-img-top" src="{{ soluciones_para_su_cultivo.imagen1.url }}"  style="height: 19rem;">
+            <div class="card-body text-center text-black fw-semibold fs-5">
+              <h4 class="fw-bold">Nombre:</h4>
+              <p class="card-text">{{ soluciones_para_su_cultivo.implemento1 }}</p>
+              <h4 class="fw-bold">Metodo De Aplicacion:</h4>
+              <p class="">{{ soluciones_para_su_cultivo.metodo_de_aplicacion1 }}</p>
+              <h4 class="fw-bold">Nivel De Toxicidad:</h4>
+              <p class="">{{ soluciones_para_su_cultivo.toxicidad1 }}</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-sm-6">
+        <div class="card card-spc container-fluid mb-2">
+            <img class="card-img-top" src="{{ soluciones_para_su_cultivo.imagen2.url }}"  style="height: 19rem;">
+            <div class="card-body text-center text-black fw-semibold fs-5">
+              <h4 class="fw-bold">Nombre:</h4>
+              <p class="card-text">{{ soluciones_para_su_cultivo.implemento2 }}</p>
+              <h4 class="fw-bold">Metodo De Aplicacion:</h4>
+              <p class="">{{ soluciones_para_su_cultivo.metodo_de_aplicacion2 }}</p>
+              <h4 class="fw-bold">Nivel De Toxicidad:</h4>
+              <p class="">{{ soluciones_para_su_cultivo.toxicidad2 }}</p>
+            </div>
+        </div>
+        </div>
+            <div class="col-xl-4 col-lg-6 col-sm-6">
+            <div class="card card-spc container-fluid mb-2">
+                <img class="card-img-top" src="{{ soluciones_para_su_cultivo.imagen3.url }}" style="height: 19rem;">
+                <div class="card-body text-center text-black fw-semibold fs-5">
+                  <h4 class="fw-bold">Nombre:</h4>
+                  <p class="card-text">{{ soluciones_para_su_cultivo.implemento3 }}</p>
+                  <h4 class="fw-bold">Metodo De Aplicacion:</h4>
+                  <p class="">{{ soluciones_para_su_cultivo.metodo_de_aplicacion3 }}</p>
+                  <h4 class="fw-bold">Nivel De Toxicidad:</h4>
+                  <p class="">{{ soluciones_para_su_cultivo.toxicidad3 }}</p>
+                </div>
+            </div>
+            </div>
+    </div>
+   
+
+
 {% endfor %}
 {% endblock %}

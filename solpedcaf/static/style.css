@@ -1,0 +1,89 @@
+/*PAGINA INICIAL*/
+
+.navbar-titulo{
+    font-size: 4rem;
+}
+
+.card-pgn-titulo{
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.card-pgn-subtitulo{
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.btn-pgn{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+@media (max-width: 425px){
+
+    .navbar-titulo{
+        font-size: 2.3rem;
+    }
+
+    .card-pgn-titulo{
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+    
+    .card-pgn-subtitulo{
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .btn-pgn{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+}
+
+
+/* SOLUCIONES PARA SU CULTIVO */
+
+.navbar-spc-titulo{
+    font-size: 3rem;
+}
+
+.card-spc{
+    width: 23rem;
+}
+
+.spc-titulo{
+    font-size: 3.8rem;
+    margin-top: 5px;
+}
+
+.spc-subtitulo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 320px){
+
+    .navbar-spc-titulo{
+        font-size: 2.1rem;
+    }
+
+
+    .card-spc{
+        width: 18.7rem;
+    }
+
+    .spc-titulo{
+        font-size: 1.7rem;
+    }
+
+    .spc-subtitulo{
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+}
+
+
