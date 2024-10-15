@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     "default":{
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'solpedcaf',
+        'NAME': 'proyect_solpedcaf',
         'USER': 'root',
         'PASSWORD': "root",
         'HOST': 'localhost',
