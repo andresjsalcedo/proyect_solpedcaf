@@ -21,7 +21,7 @@
     font-weight: 800;
 }
 
-@media (max-width: 425px){
+@media (min-width: 320px){
 
     .navbar-titulo{
         font-size: 2.5rem;
@@ -29,7 +29,7 @@
     }
 
     .card-pgn-titulo{
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 900;
     }
     
@@ -46,11 +46,13 @@
 }
 
 
-/* SOLUCIONES PARA SU CULTIVO */
+
+
+/* MODULOS */
 
 
 .card-spc{
-    width: 23rem;
+    width: 25rem;
 }
 
 .spc-titulo{
@@ -64,6 +66,7 @@
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 
 @media (max-width: 767px){
 
@@ -83,4 +86,10 @@
     }
 }
 
+@media (max-width: 2560px){
 
+    .spc-titulo{
+	font-size: 10rem;
+    }	
+
+}
