@@ -1,5 +1,6 @@
 /*PAGINA INICIAL*/
 
+
 .navbar-titulo{
     font-size: 3.5rem;
     font-weight: 800;
@@ -26,33 +27,6 @@
     font-weight: 800;
 }
 
-@media (min-width: 320px){
-
-    .navbar-titulo{
-        font-size: 2rem;
-        font-weight: 800;
-    }
-
-    .card-pgn-titulo{
-        font-size: 2rem;
-        font-weight: 900;
-    }
-    
-    .card-pgn-subtitulo{
-        margin-bottom: 1rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-    }
-    
-    .btn-pgn{
-        font-size: 1rem;
-        font-weight: 800;
-    }
-}
-
-
-
-
 /* MODULOS */
 
 .user-icon{
@@ -78,10 +52,48 @@
 }
 
 
-@media (min-width: 767px){
+@media (min-width: 320px) and (max-width: 767px){
+
+    .navbar-titulo{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .navbar-modulos{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .card-pgn-titulo{
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    
+    .card-pgn-subtitulo{
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .btn-pgn{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1440px){
 
     .navbar-titulo{
         font-size: 3.5rem;
+    }
+
+    .navbar-modulos{
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
     .user-icon{
@@ -128,13 +140,13 @@
     }
     
     .card-pgn-subtitulo{
-        margin-bottom: 2.5rem;
+        margin-bottom: 3.5rem;
         font-size: 2.5rem;
         font-weight: 600;
     }
     
     .btn-pgn{
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 800;
     }
 
