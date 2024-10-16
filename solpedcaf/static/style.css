@@ -57,6 +57,7 @@
 
 .user-icon{
     width: 4rem;
+    margin-top: 4rem;
 }
 
 
@@ -107,7 +108,7 @@
 
     .user-icon{
         width: 6rem;
-        margin-top: 2.5rem;
+        margin-top: 3.5rem;
     }
 
     .navbar-titulo{
@@ -137,6 +138,9 @@
         font-weight: 800;
     }
 
+    .card-spc{
+        width: 25rem;
+    }
 
     .spc-titulo{
 	font-size: 7rem;
