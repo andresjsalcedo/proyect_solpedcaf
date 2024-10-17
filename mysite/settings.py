@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 STATICFILES_DIRS = [
-    BASE_DIR / "solpedcaf/static",  # Asegúrate de que esta carpeta exista
+    BASE_DIR / "static/",  # Asegúrate de que esta carpeta exista
 ]
 
 
