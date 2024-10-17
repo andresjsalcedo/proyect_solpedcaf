@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import registro, login, logout, pagina_inicial_list, plagas_y_enfermedades_list, etapa_de_crecimiento_list, etapa_de_plantacion_list, etapa_de_fructificacion_list, etapa_de_floracion_list, consejos_para_su_cultivo_list, seleccion_semilla_list, cuidado_inicial_list, sembrado_list
-from .views import fertilizacion_list, soluciones_para_su_cultivo_list
+from .views import fertilizacion_list, soluciones_para_su_cultivo_list, broca_list
 
 urlpatterns = [
     path('registro/', registro, name='registro'),
@@ -18,5 +18,6 @@ urlpatterns = [
     path('pagina_inicial/solpedcafconsejos_para_su_cultivo/solpedcafsembrado/', sembrado_list, name='sembrado_list'),
     path('pagina_inicial/solpedcafconsejos_para_su_cultivo/solpedcafertilizacion/', fertilizacion_list, name='fertilizacion_list'),
     path('pagina_inicial/solpedcafsoluciones_para_su_cultivo/',soluciones_para_su_cultivo_list, name='soluciones_para_su_cultivo_list'),
+    path('pagina_inicial/solpedcafplagas_y_enfermedades/solpedcafetapa_de_fructificacion/broca/', broca_list, name='broca_list'),
     path('', login, name='login'),  # Redirige a la vista de inicio de sesión por defecto
 ]

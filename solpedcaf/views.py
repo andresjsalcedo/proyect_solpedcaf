@@ -12,6 +12,7 @@ from .models import seleccion_semilla
 from .models import cuidado_inicial
 from .models import sembrado
 from .models import fertilizacion
+from .models import broca
 from .models import soluciones_para_su_cultivo
 from .forms import RegistroForm, LoginForm
 
@@ -158,4 +159,14 @@ def soluciones_para_su_cultivo_list(request):
     return render(
         request,
         'soluciones_para_su_cultivo/post/list.html', {'soluciones_para_su_cultivos': soluciones_para_su_cultivos}
+    )
+
+
+#vista para broca
+
+def broca_list(request):
+    brocas = broca.objects.all()
+    return render(
+        request,
+        'broca/post/list.html', {'brocas': brocas}
     )

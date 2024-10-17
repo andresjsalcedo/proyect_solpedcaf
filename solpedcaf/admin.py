@@ -11,6 +11,7 @@ from .models import cuidado_inicial
 from .models import sembrado
 from .models import fertilizacion
 from .models import soluciones_para_su_cultivo
+from .models import broca
 
 # Register your models here.
 
@@ -37,3 +38,5 @@ admin.site.register(sembrado)
 admin.site.register(fertilizacion)
 
 admin.site.register(soluciones_para_su_cultivo)
+
+admin.site.register(broca)
