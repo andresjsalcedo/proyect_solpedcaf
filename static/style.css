@@ -57,7 +57,7 @@
 }
 
 
-@media (min-width: 310px) and (max-width: 768px){
+@media (min-width: 320px) and (max-width: 768px){
 
     .navbar-titulo{
         font-size: 2rem;
@@ -83,10 +83,6 @@
     .btn-pgn{
         font-size: 1rem;
         font-weight: 800;
-    }
-
-    .accordion-nombre{
-        font-size: 2rem;
     }
 }
 
