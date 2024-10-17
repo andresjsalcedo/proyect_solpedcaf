@@ -1,8 +1,19 @@
+
 /*PAGINA INICIAL*/
 
+
 .navbar-titulo{
-    font-size: 4.2rem;
+    font-size: 3.5rem;
     font-weight: 800;
+}
+
+.navbar-modulos{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar-atajos{
+    margin-top: 2rem;
 }
 
 .card-pgn-titulo{
@@ -21,15 +32,45 @@
     font-weight: 800;
 }
 
-@media (max-width: 425px){
+/* MODULOS */
+
+.user-icon{
+    width: 4rem;
+    margin-top: 2rem;
+}
+
+
+.card-spc{
+    width: auto;
+}
+
+.spc-titulo{
+    font-size: 2rem;
+    margin-top: 5px;
+    font-weight: 800;
+}
+
+.spc-subtitulo{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+@media (min-width: 320px) and (max-width: 767px){
 
     .navbar-titulo{
-        font-size: 2.1rem;
+        font-size: 2rem;
         font-weight: 800;
     }
 
+    .navbar-modulos{
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
     .card-pgn-titulo{
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 900;
     }
     
@@ -46,26 +87,23 @@
 }
 
 
-/* SOLUCIONES PARA SU CULTIVO */
 
 
-.card-spc{
-    width: 23rem;
-}
 
-.spc-titulo{
-    font-size: 3.6rem;
-    margin-top: 5px;
-    font-weight: 800;
-}
+@media (min-width: 768px) and (max-width: 1440px){
 
-.spc-subtitulo{
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
+    .navbar-titulo{
+        font-size: 3.5rem;
+    }
 
-@media (max-width: 767px){
+    .navbar-modulos{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .user-icon{
+        margin-top: 1rem;
+    }
 
 
     .card-spc{
@@ -73,14 +111,66 @@
     }
 
     .spc-titulo{
-        font-size: 2rem;
+        font-size: 2.8rem;
         font-weight: 800;
     }
 
     .spc-subtitulo{
-        font-size: 1rem;
+        font-size: 1.6rem;
         margin-bottom: 2px;
     }
 }
 
+@media (min-width: 2560px){
 
+    .user-icon{
+        width: 6rem;
+        margin-top: 3.5rem;
+    }
+
+    .navbar-titulo{
+        font-size: 8rem;
+        font-weight: 800;
+    }
+
+    .hr-top{
+        width: 178rem;
+    }
+
+    .navbar-modulos{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 1rem;
+    }
+
+    .card-pgn-titulo{
+        font-size: 6.6rem;
+        font-weight: 900;
+    }
+    
+    .card-pgn-subtitulo{
+        margin-bottom: 3.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    
+    .btn-pgn{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    .card-spc{
+        width: 25rem;
+    }
+
+    .spc-titulo{
+	font-size: 7rem;
+    font-weight: 800;
+    }	
+
+    .spc-subtitulo{
+    font-size: 2.7rem;
+    margin-bottom: 2px;
+    }
+
+}
