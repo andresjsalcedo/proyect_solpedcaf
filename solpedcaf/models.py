@@ -32,6 +32,9 @@ class etapa_de_crecimiento(models.Model):
     titulo = models.CharField(max_length=200)
     tipo = models.CharField(max_length=10)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen2 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen3 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urldestino = models.CharField(max_length=100, null=True)
 
 
 
@@ -61,6 +64,9 @@ class etapa_de_fructificacion(models.Model):
     titulo = models.CharField(max_length=200)
     tipo = models.CharField(max_length=10)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen2 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen3 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urldestino = models.CharField(max_length=100, null=True)
 
 
 
@@ -74,7 +80,9 @@ class etapa_de_floracion(models.Model):
     titulo = models.CharField(max_length=200)
     tipo = models.CharField(max_length=10)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
-
+    imagen2 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    imagen3 = models.ImageField(upload_to='modulos', null=True, blank=True)
+    urldestino = models.CharField(max_length=100, null=True)
 
 
     def __str__(self):
