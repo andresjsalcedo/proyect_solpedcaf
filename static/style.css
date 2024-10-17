@@ -121,7 +121,7 @@
     }
 }
 
-@media (min-width: 2560px){
+@media (min-width: 2660px){
 
     .user-icon{
         width: 6rem;
@@ -131,6 +131,10 @@
     .navbar-titulo{
         font-size: 8rem;
         font-weight: 800;
+    }
+
+    .img-top{
+        height: 20rem;
     }
 
     .hr-top{
