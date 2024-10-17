@@ -121,7 +121,7 @@
     }
 }
 
-@media (min-width: 1900px) and (max-width: 2598px){
+@media (min-width: 1200px) and (max-width: 2598px){
     .user-icon{
         width: 6rem;
         margin-top: 3.5rem;
