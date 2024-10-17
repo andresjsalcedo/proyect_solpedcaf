@@ -121,7 +121,7 @@
     }
 }
 
-@media (min-width: 2660px){
+@media (min-width: 1441px) and (max-width: 2560px){
 
     .user-icon{
         width: 6rem;
