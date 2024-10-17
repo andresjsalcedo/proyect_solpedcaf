@@ -5,27 +5,42 @@
 {% block content %}
 
 {% for cuidado_inicial in cuidado_inicials %}
-<link rel="stylesheet" href="{% static 'css/style.css'%}">
-<div class="col-xl-6 d-flex justify-content-center">
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          {{ nombre.seleccion_semilla }}
-        </button>
-      </h2>
-      <div class="row">
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <div class="col">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-          </div>
-          <div class="col">
-            <img src="" class="">
-          </div>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+    <div class="container-fluid mt-4">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header border border-3 border-success rounded rounded-3" id="headingOne">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 4rem;">
+                      {{ cuidado_inicial.nombre }}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-7 col-lg-7 d-flex justify-content-center">
+                                <p class="fw-semibold fs-3">{{ cuidado_inicial.descripcion}}</p>
+                            </div>
+                            <div class="col-6 col-lg-5 d-flex justify-content-center">
+                                <img src="{{ cuidado_inicial.imagen.url }}" class="col-md-4 img-fluid rounded img-accordion mb-3" style="width: 40rem;">
+                            </div>
+                        </div>    
+
+                        <div class="row">
+                            <div class="col-md-12 justify-content-center order-md-2 order-1 mb-3 mb-md-0">
+                                <div class="">
+                                <h1 class="fw-bold mb-4" style="font-size: 4rem;">A TENER EN CUENTA:</h1>
+                                <ul class="fs-3">
+                                <li class="fw-semibold">{{ cuidado_inicial.a_tener_en_cuenta}}</li>
+                                <li class="fw-semibold">{{ cuidado_inicial.a_tener_en_cuenta2}}</li>
+                                <li class="fw-semibold">{{ cuidado_inicial.a_tener_en_cuenta3}}</li>
+                                </ul>
+                               </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
     </div>
 {% endfor %}
 {% endblock %}
