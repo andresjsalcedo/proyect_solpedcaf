@@ -90,7 +90,7 @@
 
 
 
-@media (min-width: 768px) and (max-width: 1440px){
+@media (min-width: 768px) and (max-width: 2000px){
 
     .navbar-titulo{
         font-size: 3.5rem;
@@ -121,7 +121,7 @@
     }
 }
 
-@media (min-width: 1441px) and (max-width: 2560px){
+@media (min-width: 2560px){
 
     .user-icon{
         width: 6rem;
