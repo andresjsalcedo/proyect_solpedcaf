@@ -84,6 +84,10 @@
         font-size: 1rem;
         font-weight: 800;
     }
+
+    .accordion-nombre{
+        font-size: 2rem;
+    }
 }
 
 
