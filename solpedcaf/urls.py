@@ -19,6 +19,6 @@ urlpatterns = [
     path('pagina_inicial/solpedcafconsejos_para_su_cultivo/solpedcafertilizacion/', fertilizacion_list, name='fertilizacion_list'),
     path('pagina_inicial/solpedcafsoluciones_para_su_cultivo/',soluciones_para_su_cultivo_list, name='soluciones_para_su_cultivo_list'),
     path('pagina_inicial/solpedcafplagas_y_enfermedades/solpedcafetapa_de_fructificacion/broca/', broca_list, name='broca_list'),
-    path('pagina_inicial/solpedcafplagas_y_enfermedades/solpedcafetapa_de_crecimiento/roya/', roya_list, name='roya_list'),
+    path('pagina_inicial/solpedcafplagas_y_enfermedades/solpedcafetapa_de_plantacion/roya/', roya_list, name='roya_list'),
     path('', login, name='login'),  # Redirige a la vista de inicio de sesión por defecto
 ]
