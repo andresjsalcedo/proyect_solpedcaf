@@ -13,6 +13,7 @@ from .models import cuidado_inicial
 from .models import sembrado
 from .models import fertilizacion
 from .models import broca
+from .models import roya
 from .models import soluciones_para_su_cultivo
 from .forms import RegistroForm, LoginForm
 
@@ -169,4 +170,14 @@ def broca_list(request):
     return render(
         request,
         'broca/post/list.html', {'brocas': brocas}
+    )
+
+
+#vista para roya
+
+def roya_list(request):
+    royas = roya.objects.all()
+    return render(
+        request,
+        'roya/post/list.html', {'royas': royas}
     )

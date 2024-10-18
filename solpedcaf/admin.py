@@ -12,6 +12,7 @@ from .models import sembrado
 from .models import fertilizacion
 from .models import soluciones_para_su_cultivo
 from .models import broca
+from .models import roya
 
 # Register your models here.
 
@@ -40,3 +41,5 @@ admin.site.register(fertilizacion)
 admin.site.register(soluciones_para_su_cultivo)
 
 admin.site.register(broca)
+
+admin.site.register(roya)

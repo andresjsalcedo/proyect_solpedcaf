@@ -1,0 +1,32 @@
+{% extends "roya/broca.html" %}
+{% load static %}
+
+
+{% block title %}ROYA{% endblock %}
+
+{% block content %}
+
+  {% for roya in royas %}
+    <div class="col-xl-7 mt-4">
+          <h1 class="fw-bold" style="font-size: 3.5rem;">{{ roya.nombre }}</h1>
+          <h2 class="fw-bold" style="font-size: 2.5rem;">{{ roya.tipo }}</h2>
+
+          <h1 class="fw-bold" style="font-size: 3rem;">Descripcion:</h1>
+          <p class="col-xl-11 fw-semibold fs-5">{{ roya.descripcion }}</p>
+
+            <h1 class="fw-bold mt-4" style="font-size: 3rem;">Sintomas:</h1>
+            <ul class="fw-semibold fs-5">
+                <li>{{ roya.sintomas }}</li>
+                <li>{{ roya.sintomas2 }}</li>
+                <li>{{ roya.sintomas3 }}</li>
+            </ul>
+     </div>
+
+    <div class="col-xl-5 mt-4">
+            <img src="{{ roya.imagen.url }}" class="img-fluid rounded-0 d-flex justify-content-center">
+            <h3 class="fw-bold mt-3" style="font-size: 2.9rem;">Metodos de prevencion:</h3>
+            <p class="fw-semibold fs-5">{{ roya.mdp }}</p>
+    </div>
+ 
+  {% endfor %}
+{% endblock %}

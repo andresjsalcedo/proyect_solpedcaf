@@ -9,7 +9,7 @@
 {% for etapa_de_plantacion in etapa_de_plantacions %}
 <link rel="stylesheet" href="{% static 'style.css'%}">
 <div class="col-xl-4 d-flex justify-content-center">
-  <div class="card" style="width: 30rem;">
+  <div class="card" style="width: 30rem;"><a href="{{ etapa_de_plantacion.urldestino}}"></a>
             <div class="img-card">
                 <img src=" {{etapa_de_plantacion.imagen.url}} " class="d-block img-fluid" alt="Imagen 1" style="height: 18.6rem; width: 29rem;">
             </div>
