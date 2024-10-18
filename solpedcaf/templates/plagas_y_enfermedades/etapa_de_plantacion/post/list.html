@@ -9,13 +9,13 @@
 {% for etapa_de_plantacion in etapa_de_plantacions %}
 <link rel="stylesheet" href="{% static 'style.css'%}">
 <div class="col-xl-4 d-flex justify-content-center">
-  <div class="card" style="width: 30rem;"><a href="{{ etapa_de_plantacion.urldestino}}">
+  <div class="card" style="width: 30rem;"><a href="{{ etapa_de_plantacion.urldestino}}" class="text-decoration-none">
             <div class="img-card">
                 <img src=" {{etapa_de_plantacion.imagen.url}} " class="d-block img-fluid" alt="Imagen 1" style="height: 18.6rem; width: 29rem;">
             </div>
     <div class="card-body">
         <h2 class="card-subtitle mb-2 text-muted fw-bold"> {{etapa_de_plantacion.tipo}} </h2>
-        <h1 class="card-title fw-bold"> {{etapa_de_plantacion.titulo}} </h1>
+        <h1 class="card-title fw-bold text-black"> {{etapa_de_plantacion.titulo}} </h1>
     </div>
     </a>
 </div>
