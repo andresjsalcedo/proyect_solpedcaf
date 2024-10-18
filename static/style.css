@@ -45,19 +45,19 @@
 }
 
 .spc-titulo{
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-top: 5px;
     font-weight: 800;
 }
 
 .spc-subtitulo{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 
-@media (min-width: 320px) and (max-width: 768px){
+@media (min-width: 319px) and (max-width: 768px){
 
     .navbar-titulo{
         font-size: 2rem;
@@ -83,6 +83,14 @@
     .btn-pgn{
         font-size: 1rem;
         font-weight: 800;
+    }
+
+    .spc-subtitulo{
+        font-size: 1.2rem;
+    }
+
+    .spc-titulo{
+        font-size: 1.6;
     }
 }
 

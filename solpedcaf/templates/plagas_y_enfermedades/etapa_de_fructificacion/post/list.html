@@ -8,8 +8,7 @@
 
 {% for etapa_de_fructificacion in etapa_de_fructificacions %}
 <link rel="stylesheet" href="{% static 'style.css'%}">
-<a href="{{ etapa_de_fructificacion.urldestino }}">
-<div class="col-xl-4 d-flex justify-content-center">
+<div class="col-xl-4 d-flex justify-content-center"><a href="{{ etapa_de_fructificacion.urldestino }}">
   <div class="card container-fluid" style="width: 30rem;">
             <div class="img-card">
                 <img src=" {{etapa_de_fructificacion.imagen.url}} " class="d-block img-fluid" alt="Imagen 1" style="height: 18.6rem; width: 29rem;">
@@ -19,8 +18,9 @@
         <h1 class="card-title fw-bold"> {{etapa_de_fructificacion.titulo}} </h1>
     </div>
 </div>
-</div>
 </a>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
