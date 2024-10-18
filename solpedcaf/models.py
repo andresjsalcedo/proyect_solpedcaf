@@ -203,6 +203,7 @@ class broca(models.Model):
     sintomas3 = models.TextField(default=0)
     descripcion = models.TextField()
     mdp = models.TextField()
+    urlDestino = models.CharField(max_length=200, null=True)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
 
 
@@ -222,6 +223,7 @@ class roya(models.Model):
     sintomas3 = models.TextField(default=0)
     descripcion = models.TextField()
     mdp = models.TextField()
+    urlDestino = models.CharField(max_length=200, null=True)
     imagen = models.ImageField(upload_to='modulos', null=True, blank=True)
 
 
