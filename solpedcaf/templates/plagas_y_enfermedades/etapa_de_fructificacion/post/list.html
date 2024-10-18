@@ -9,7 +9,7 @@
 {% for etapa_de_fructificacion in etapa_de_fructificacions %}
 <link rel="stylesheet" href="{% static 'style.css'%}">
 <div class="col-xl-4 d-flex justify-content-center">
-  <div class="card container-fluid" style="width: 30rem;"><a href="{{ etapa_de_fructificacion.urldestino}}">
+  <div class="card container-fluid" style="width: 30rem;"><a href="{{ etapa_de_fructificacion.urldestino}}" class="text-decoration-none">
             <div class="img-card">
                 <img src=" {{etapa_de_fructificacion.imagen.url}} " class="d-block img-fluid" alt="Imagen 1" style="height: 18.6rem; width: 29rem;">
             </div>
