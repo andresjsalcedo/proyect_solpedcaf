@@ -14,6 +14,7 @@ from .models import sembrado
 from .models import fertilizacion
 from .models import broca
 from .models import roya
+from .models import usuario
 from .models import soluciones_para_su_cultivo
 from .forms import RegistroForm, LoginForm
 
@@ -24,37 +25,57 @@ def pagina_inicial_list(request):
 
 # Vista para el registro de usuarios
 def registro(request):
-    if request.method == 'POST':
-        form = RegistroForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login')
-    else:
-        form = RegistroForm()
-    return render(request, 'pagina_inicial/registro.html', {'form': form})
+   # Si la solicitud es de tipo POST
+   if request.method == 'POST':
+       # Se crea un formulario RegistroForm con los datos enviados en la solicitud
+       form = RegistroForm(request.POST)
+       # Si el formulario es válido
+       if form.is_valid():
+           # Se guarda el nuevo usuario
+           form.save()
+           # Se redirige al usuario a la página de inicio de sesión
+           return redirect('login')
+   # Si la solicitud no es de tipo POST
+   else:
+       # Se crea un formulario RegistroForm vacío
+       form = RegistroForm()
+   # Se renderiza la plantilla 'pagina_inicial/registro.html' pasando el formulario como contexto
+   return render(request, 'pagina_inicial/registro.html', {'form': form})
 
 # Vista para el inicio de sesión
 def login(request):
-    if request.method == 'POST':
-        form = LoginForm(request, data=request.POST)
-        if form.is_valid():
-            user = form.get_user()
-            auth_login(request, user)
-            return redirect('pagina_inicial_list')  # Redirige a la lista después de iniciar sesión
-    else:
-        form = LoginForm()
-    return render(request, 'pagina_inicial/login.html', {'form': form})
+   # Si la solicitud es de tipo POST
+   if request.method == 'POST':
+       # Se crea un formulario LoginForm con los datos enviados en la solicitud
+       form = LoginForm(request, data=request.POST)
+       # Si el formulario es válido
+       if form.is_valid():
+           # Se obtiene el usuario del formulario
+           user = form.get_user()
+           # Se inicia sesión con el usuario
+           auth_login(request, user)
+           # Se redirige al usuario a la lista de la página inicial
+           return redirect('pagina_inicial_list')
+   # Si la solicitud no es de tipo POST
+   else:
+       # Se crea un formulario LoginForm vacío
+       form = LoginForm()
+   # Se renderiza la plantilla 'pagina_inicial/login.html' pasando el formulario como contexto
+   return render(request, 'pagina_inicial/login.html', {'form': form})
 
 # Vista para cerrar sesión
 @login_required
 def logout(request):
-    auth_logout(request)
-    return redirect('login')
+   # Se cierra la sesión del usuario
+   auth_logout(request)
+   # Se redirige al usuario a la página de inicio de sesión
+   return redirect('login')
 
 # Vista para la página inicial protegida
 @login_required
 def pagina_inicial_view(request):
-    return render(request, 'pagina_inicial/pagina_inicial.html', {'user': request.user})
+   # Se renderiza la plantilla 'pagina_inicial/pagina_inicial.html' pasando el usuario actual como contexto
+   return render(request, 'pagina_inicial/pagina_inicial.html', {'user': request.user})
 
 
 #vista para la pagina plagas y enfermedades 
@@ -181,3 +202,69 @@ def roya_list(request):
         request,
         'roya/post/list.html', {'royas': royas}
     )
+
+#VISTA PARA USUARIOS INTRAPLAS SAS
+
+def usuario_list(request):
+    usuarios = usuario.objects.all()
+    return render(
+        request,
+        'adminpanel/post/list.html', {'usuarios': usuarios}
+    )
+
+
+
+# Vista para el registro de usuarios intraplas
+def registrointraplas(request):
+   # Si la solicitud es de tipo POST
+   if request.method == 'POST':
+       # Se crea un formulario RegistroForm con los datos enviados en la solicitud
+       form = RegistroForm(request.POST)
+       # Si el formulario es válido
+       if form.is_valid():
+           # Se guarda el nuevo usuario
+           form.save()
+           # Se redirige al usuario a la página de inicio de sesión
+           return redirect('loginintraplas')
+   # Si la solicitud no es de tipo POST
+   else:
+       # Se crea un formulario RegistroForm vacío
+       form = RegistroForm()
+   # Se renderiza la plantilla 'pagina_inicial/registro.html' pasando el formulario como contexto
+   return render(request, 'pagina_inicial/registrointraplas.html', {'form': form})
+
+# Vista para el inicio de sesión intraplas
+def loginintraplas(request):
+   # Si la solicitud es de tipo POST
+   if request.method == 'POST':
+       # Se crea un formulario LoginForm con los datos enviados en la solicitud
+       form = LoginForm(request, data=request.POST)
+       # Si el formulario es válido
+       if form.is_valid():
+           # Se obtiene el usuario del formulario
+           user = form.get_user()
+           # Se inicia sesión con el usuario
+           auth_login(request, user)
+           # Se redirige al usuario a la lista de la página inicial
+           return redirect('usuario_list')
+   # Si la solicitud no es de tipo POST
+   else:
+       # Se crea un formulario LoginForm vacío
+       form = LoginForm()
+   # Se renderiza la plantilla 'pagina_inicial/loginintraplas.html' pasando el formulario como contexto
+   return render(request, 'pagina_inicial/loginintraplas.html', {'form': form})
+
+# Vista para cerrar sesión intraplas
+@login_required
+def logoutintraplas(request):
+   # Se cierra la sesión del usuario
+   auth_logout(request)
+   # Se redirige al usuario a la página de inicio de sesión
+   return redirect('loginintraplas')
+
+# Vista para la página inicial protegida intraplas
+@login_required
+def adminpanel_view(request):
+   # Se renderiza la plantilla 'pagina_inicial/adminpanel.html' pasando el usuario actual como contexto
+   return render(request, 'pagina_inicial/adminpanel.html', {'user': request.user})
+

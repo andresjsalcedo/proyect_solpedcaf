@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from .models import usuario
 
 class RegistroForm(UserCreationForm):
     class Meta:
@@ -25,3 +26,4 @@ class RegistroForm(UserCreationForm):
 
 class LoginForm(AuthenticationForm):
     pass
+
